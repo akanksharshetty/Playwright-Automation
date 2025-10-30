@@ -1,0 +1,13 @@
+{
+  "name": "playwright-automation",
+  "version": "1.0.0",
+  "description": "This repository used to create a complete playwright automation framework",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Aakanksha.R",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2"
+  }
+}
