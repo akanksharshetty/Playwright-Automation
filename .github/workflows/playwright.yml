@@ -25,3 +25,18 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+    # 📧 EMAIL STEP
+    - name: Send Playwright report via email
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USER }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: "Playwright Test Report - GitHub CI"
+        to: "akankshabubbly15@gmail.com"
+        from: "Playwright CI <${{ secrets.EMAIL_USER }}>"
+        secure: true
+        attachments: |
+          playwright-report/index.html
